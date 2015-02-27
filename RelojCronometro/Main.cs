@@ -4,8 +4,7 @@ namespace RelojCronometro
 {
 	class RelojCronometro
 	{
-	
-	public void Cronometro(){
+		public void Cronometro(){
 			int hora,minuto,segundo;
 			Console.Clear();
 			for (hora=0;hora<24;hora++) {
@@ -19,6 +18,20 @@ namespace RelojCronometro
 				}
 			}
 		}
+		
+		public void Reloj(){
+			
+			do{
+			DateTime fechaActual = DateTime.Now;
+			Console.WriteLine("Hora Actual");
+			Console.WriteLine(fechaActual.Hour + ":" +
+			                  fechaActual.Minute + ":"+ 
+				              fechaActual.Second);
+			System.Threading.Thread.Sleep(1000);
+			Console.Clear();
+			}while(true);
+		}
+		
 		public static void Main (string[] args)
 		{
 			RelojCronometro Rc=new RelojCronometro();
